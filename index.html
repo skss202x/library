@@ -3,51 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Library Hub</title>
+    <title>School Library Hub | Student Reviews</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <h1>📚 School Library Hub</h1>
-        <p>Reviews, Quizzes, and Your Next Great Read</p>
+        <div class="container">
+            <h1>📚 School Library Hub</h1>
+            <p>Read. Review. Repeat.</p>
+        </div>
     </header>
 
-    <main>
-        <section id="quiz-container">
+    <main class="container">
+        
+        <section id="quiz-container" class="card">
             <h2>🧠 Quiz of the Day</h2>
             <div id="quiz-content">
-                <p id="question">Loading today's challenge...</p>
-                <div id="options"></div>
-                <p id="quiz-feedback"></p>
+                <p id="question" style="font-weight: bold; font-size: 1.2rem;">Loading today's challenge...</p>
+                <div id="options" class="quiz-options">
+                    </div>
+                <p id="quiz-feedback" class="feedback-msg"></p>
             </div>
         </section>
 
-        <section id="reviews">
-            <h2>📖 Teacher-Approved Reviews</h2>
-            <div class="review-grid" id="review-grid">
-                </div>
+        <section id="submission-cta" class="cta-section">
+            <div class="cta-card">
+                <h2>✍️ Got a Graded Review?</h2>
+                <p>Share your thoughts with the school! Once your teacher grades your review, upload it here to help your classmates find their next favorite book.</p>
+                <a href="YOUR_GOOGLE_FORM_URL" target="_blank" class="btn-primary">Submit My Review</a>
+            </div>
         </section>
 
-        <section id="submit-review">
-            <h2>✍️ Submit Your Graded Review</h2>
-            <form id="review-form">
-                <input type="text" id="book-title" placeholder="Book Title" required>
-                <input type="text" id="student-name" placeholder="Your Name" required>
-                <select id="rating">
-                    <option value="5">⭐⭐⭐⭐⭐ (Excellent)</option>
-                    <option value="4">⭐⭐⭐⭐ (Great)</option>
-                    <option value="3">⭐⭐⭐ (Good)</option>
-                </select>
-                <textarea id="review-text" placeholder="Paste your teacher-graded review here..." required></textarea>
-                <button type="submit">Submit for Verification</button>
-            </form>
-            <p><small>*Note: Submissions are reviewed by the librarian before appearing.</small></p>
+        <section id="reviews-section">
+            <div class="section-header">
+                <h2>📖 Latest Library Reviews</h2>
+                <p>Verified reviews from students like you.</p>
+            </div>
+            
+            <div class="review-grid" id="review-grid">
+                <p class="loading-text">Fetching latest reviews from the library...</p>
+            </div>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 School Library Project</p>
+        <div class="container">
+            <p>&copy; 2026 Your School Name Library Project</p>
+            <p><small>Powered by GitHub Pages & Google Sheets</small></p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
