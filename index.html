@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Library Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>📚 School Library Hub</h1>
+        <p>Reviews, Quizzes, and Your Next Great Read</p>
+    </header>
+
+    <main>
+        <section id="quiz-container">
+            <h2>🧠 Quiz of the Day</h2>
+            <div id="quiz-content">
+                <p id="question">Loading today's challenge...</p>
+                <div id="options"></div>
+                <p id="quiz-feedback"></p>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <h2>📖 Teacher-Approved Reviews</h2>
+            <div class="review-grid" id="review-grid">
+                </div>
+        </section>
+
+        <section id="submit-review">
+            <h2>✍️ Submit Your Graded Review</h2>
+            <form id="review-form">
+                <input type="text" id="book-title" placeholder="Book Title" required>
+                <input type="text" id="student-name" placeholder="Your Name" required>
+                <select id="rating">
+                    <option value="5">⭐⭐⭐⭐⭐ (Excellent)</option>
+                    <option value="4">⭐⭐⭐⭐ (Great)</option>
+                    <option value="3">⭐⭐⭐ (Good)</option>
+                </select>
+                <textarea id="review-text" placeholder="Paste your teacher-graded review here..." required></textarea>
+                <button type="submit">Submit for Verification</button>
+            </form>
+            <p><small>*Note: Submissions are reviewed by the librarian before appearing.</small></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 School Library Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
